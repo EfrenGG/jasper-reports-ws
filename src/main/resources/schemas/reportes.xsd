@@ -1,0 +1,66 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://genericframework.org/schemas/reportes"
+           targetNamespace="http://genericframework.org/schemas/reportes" elementFormDefault="qualified">
+	
+	<xs:element name="generaReporteRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombreReporte" minOccurs="1" type="xs:string"/>
+                <xs:element name="columnas" minOccurs="1" maxOccurs="unbounded" type="tns:columnaReporte"/>
+                <xs:element name="tamanoMargen" type="tns:tamanoReporte"/>
+                <xs:element name="tamanoFuente" type="tns:tamanoReporte"/>
+                <xs:element name="horizontal" type="xs:boolean"/>
+                <xs:element name="tipoArchivo" minOccurs="1" type="tns:tipoArchivo"/>
+                <xs:element name="datos" minOccurs="1" type="xs:base64Binary"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="generaReporteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="respuesta" type="xs:string"/>
+                <xs:element name="archivo" type="xs:base64Binary"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="columnaReporte">
+        <xs:sequence>
+        	<xs:element name="titulo" minOccurs="1" type="xs:string"/>
+            <xs:element name="nombre" minOccurs="1" type="xs:string"/>
+            <xs:element name="tipo" type="tns:tipoCampo"/>
+            <xs:element name="tamano" type="xs:integer"/>
+            <xs:element name="orden" type="xs:integer"/>
+            <xs:element name="patron" type="xs:string"/>
+            <xs:element name="agrupador" type="xs:boolean"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoArchivo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TXT"/>
+            <xs:enumeration value="CSV"/>
+            <xs:enumeration value="PDF"/>
+            <xs:enumeration value="XLSX"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tipoCampo">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="string"/>
+            <xs:enumeration value="integer"/>
+            <xs:enumeration value="bigDecimal"/>
+            <xs:enumeration value="date"/>
+            <xs:enumeration value="long"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="tamanoReporte">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SM"/>
+            <xs:enumeration value="MD"/>
+            <xs:enumeration value="LG"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>

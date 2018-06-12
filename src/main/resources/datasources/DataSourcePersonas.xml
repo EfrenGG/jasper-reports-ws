@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<record>
+		<nombre>Ilse Maryel</nombre>
+		<apellidos>Gaytán</apellidos>
+		<edad>27</edad>
+	</record>
+	<record>
+		<nombre>Efren</nombre>
+		<apellidos>García</apellidos>
+		<edad>27</edad>
+	</record>
+	<record>
+		<nombre>León Alejandro</nombre>
+		<apellidos>García</apellidos>
+		<edad>3</edad>
+	</record>
+	<record>
+		<nombre>Arturo</nombre>
+		<apellidos>García</apellidos>
+		<edad>76</edad>
+	</record>
+	<record>
+		<nombre>Eduardo</nombre>
+		<apellidos>García</apellidos>
+		<edad>50</edad>
+	</record>
+</data>

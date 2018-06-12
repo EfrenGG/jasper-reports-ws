@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<record>
+		<nombre>Efren</nombre>
+		<apellidoPaterno>García</apellidoPaterno>
+		<apellidoMaterno>Guarneros</apellidoMaterno>
+	</record>
+	<record>
+		<nombre>Ilse Maryel</nombre>
+		<apellidoPaterno>Gaytán</apellidoPaterno>
+		<apellidoMaterno>Gil</apellidoMaterno>
+	</record>
+	<record>
+		<nombre>León Alejandro</nombre>
+		<apellidoPaterno>García</apellidoPaterno>
+		<apellidoMaterno>Gaytán</apellidoMaterno>
+	</record>
+</data>

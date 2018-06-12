@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<record>
+		<clave>AC</clave>
+		<descripcion>Activo</descripcion>
+	</record>
+	<record>
+		<clave>IN</clave>
+		<descripcion>Inactivo</descripcion>
+	</record>
+	<record>
+		<clave>LQ</clave>
+		<descripcion>Liquidado</descripcion>
+	</record>
+	<record>
+		<clave>CL</clave>
+		<descripcion>Cancelado</descripcion>
+	</record>
+	<record>
+		<clave>PE</clave>
+		<descripcion>Pendiente</descripcion>
+	</record>
+</data>

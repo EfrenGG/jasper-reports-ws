@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<situaciones>
+	<situacion>
+		<clave>AC</clave>
+		<descripcion>Activo</descripcion>
+	</situacion>
+	<situacion>
+		<clave>IN</clave>
+		<descripcion>Inactivo</descripcion>
+	</situacion>
+	<situacion>
+		<clave>LQ</clave>
+		<descripcion>Liquidado</descripcion>
+	</situacion>
+	<situacion>
+		<clave>CL</clave>
+		<descripcion>Cancelado</descripcion>
+	</situacion>
+	<situacion>
+		<clave>PR</clave>
+		<descripcion>Prueba</descripcion>
+	</situacion>
+</situaciones>
