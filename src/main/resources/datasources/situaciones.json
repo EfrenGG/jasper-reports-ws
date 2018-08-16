@@ -1,0 +1,25 @@
+{
+	"total": 12,
+	"datos": [
+		{
+			"clave": "AC",
+			"descripcion": "Activo"
+		},
+		{
+			"clave": "IN",
+			"descripcion": "Inactivo"
+		},
+		{
+			"clave": "LQ",
+			"descripcion": "Liquidado"
+		},
+		{
+			"clave": "CL",
+			"descripcion": "Cancelado"
+		},
+		{
+			"clave": "PR",
+			"descripcion": "Prueba"
+		}
+	]
+}

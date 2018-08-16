@@ -78,10 +78,10 @@ public class DynamicReportsTemplate {
 		currencyType = new CurrencyType();
 
 		dynamicReportsComponent = cmp.horizontalList(
-				cmp.image(DynamicReportsTemplate.class.getClassLoader().getResource(config.getString("pathLogo"))).setFixedDimension(100, 66),
+				cmp.image(DynamicReportsTemplate.class.getClassLoader().getResource(config.getString("pathLogo"))).setFixedDimension(120, 52),
 				cmp.verticalList(
 						cmp.text(config.getString("nombreCompania")).setStyle(bold20CenteredStyle)
-								.setHorizontalTextAlignment(HorizontalTextAlignment.LEFT)))
+								.setHorizontalTextAlignment(HorizontalTextAlignment.CENTER)))
 				.setFixedWidth(300);
 
 		footerComponent = cmp.pageXofY().setStyle(stl.style(boldCenteredStyle).setTopBorder(stl.pen1Point()));

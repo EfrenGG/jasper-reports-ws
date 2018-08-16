@@ -1,8 +1,8 @@
 
 package org.genericframework.reportes.dynamic;
 
-import static net.sf.dynamicreports.report.builder.DynamicReports.col;
 import static net.sf.dynamicreports.report.builder.DynamicReports.cm;
+import static net.sf.dynamicreports.report.builder.DynamicReports.col;
 import static net.sf.dynamicreports.report.builder.DynamicReports.grp;
 import static net.sf.dynamicreports.report.builder.DynamicReports.report;
 import static net.sf.dynamicreports.report.builder.DynamicReports.type;
@@ -38,12 +38,26 @@ import net.sf.dynamicreports.report.constant.WhenNoDataType;
 import net.sf.dynamicreports.report.definition.datatype.DRIDataType;
 import net.sf.dynamicreports.report.exception.DRException;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.data.JRAbstractTextDataSource;
 import net.sf.jasperreports.engine.data.JRXmlDataSource;
+import net.sf.jasperreports.engine.data.JsonDataSource;
 
 @Service
 public class DynamicReportsService implements ReportesService {
 	
 	private ColumnGroupBuilder agrupador;
+
+	@Override
+	public byte[] generaReporteJasper(String tituloReporte, TamanoReporte tamanoMargen, TamanoReporte tamanoFuente,
+			boolean esHorizontal, TipoArchivo tipoArchivo, String datos, List<ColumnaReporte> columnas) {
+		byte[] reporte = null;
+		try {
+			reporte = generaReporteJasper(tituloReporte, tamanoMargen, tamanoFuente, esHorizontal, tipoArchivo, generaDataSourceJson(datos), obtenColumnas(columnas));
+		} catch(JRException e) {
+			e.printStackTrace();
+		}
+		return reporte;
+	}
 
 	@Override
 	public byte[] generaReporteJasper(String tituloReporte, TamanoReporte tamanoMargen, TamanoReporte tamanoFuente, boolean esHorizontal, TipoArchivo tipoArchivo, byte[] datos,
@@ -58,7 +72,7 @@ public class DynamicReportsService implements ReportesService {
 		return reporte;
 	}
 
-	private byte[] generaReporteJasper(String tituloReporte, TamanoReporte tamanoMargen, TamanoReporte tamanoFuente, boolean esHorizontal, TipoArchivo tipoArchivo, JRXmlDataSource datos,
+	private byte[] generaReporteJasper(String tituloReporte, TamanoReporte tamanoMargen, TamanoReporte tamanoFuente, boolean esHorizontal, TipoArchivo tipoArchivo, JRAbstractTextDataSource datos,
 			ColumnBuilder<?, ?>[] columnas) {
 		byte[] reporte = null;
 		try {
@@ -174,6 +188,10 @@ public class DynamicReportsService implements ReportesService {
 			break;
 		}
 		return (DRIDataType) tipoCampo;
+	}
+	
+	private JsonDataSource generaDataSourceJson(String datos) throws JRException {
+		return new JsonDataSource(new ByteArrayInputStream(datos.getBytes()), "datos");
 	}
 
 	private JRXmlDataSource generaDataSourceXml(byte[] datos) throws JRException {

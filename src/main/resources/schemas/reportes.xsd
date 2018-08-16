@@ -10,7 +10,7 @@
                 <xs:element name="tamanoFuente" type="tns:tamanoReporte"/>
                 <xs:element name="horizontal" type="xs:boolean"/>
                 <xs:element name="tipoArchivo" minOccurs="1" type="tns:tipoArchivo"/>
-                <xs:element name="datos" minOccurs="1" type="xs:base64Binary"/>
+                <xs:element name="datos" minOccurs="1" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

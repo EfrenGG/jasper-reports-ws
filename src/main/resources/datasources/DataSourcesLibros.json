@@ -1,0 +1,113 @@
+{
+	"total": 12,
+	"datos": [
+		{
+			"id": 1,
+			"nombre": "100 años de soledad",
+			"autor": "Gabriel García Márquez",
+			"numPaginas": 500,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:37.991113-05:00"
+		},
+		{
+			"id": 2,
+			"nombre": "Crónica de una muerte anunciada",
+			"autor": "Gabriel García Márquez",
+			"numPaginas": 100,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.103463-05:00"
+		},
+		{
+			"id": 3,
+			"nombre": "Santa",
+			"autor": "Federico Gamboa",
+			"numPaginas": 150,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104291-05:00"
+		},
+		{
+			"id": 4,
+			"nombre": "Secrets of the Javascript Ninja SECOND EDITION",
+			"autor": "John Resig",
+			"numPaginas": 440,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104328-05:00"
+		},
+		{
+			"id": 5,
+			"nombre": "Spring in Action SECOND EDITION",
+			"autor": "Craig Walls",
+			"numPaginas": 730,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104402-05:00"
+		},
+		{
+			"id": 6,
+			"nombre": "Spring in Action FOURTH EDITION",
+			"autor": "Craig Walls",
+			"numPaginas": 600,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104419-05:00"
+		},
+		{
+			"id": 7,
+			"nombre": "Head First Servlets & JSP 2nd Edition",
+			"autor": "Bryan Basham",
+			"numPaginas": 880,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104445-05:00"
+		},
+		{
+			"id": 8,
+			"nombre": "Head First Java & JSP 3rd Edition",
+			"autor": "Kathy Sierra",
+			"numPaginas": 970,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104457-05:00"
+		},
+		{
+			"id": 9,
+			"nombre": "Los hornos de Hitler",
+			"autor": "Olga Lengyel",
+			"numPaginas": 264,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104468-05:00"
+		},
+		{
+			"id": 10,
+			"nombre": "Getting MEAN",
+			"autor": "Simon Holmes",
+			"numPaginas": 416,
+			"cveTipoLibro": "TI",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104488-05:00"
+		},
+		{
+			"id": 11,
+			"nombre": "La tregua",
+			"autor": "Mario Benedetti",
+			"numPaginas": 200,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.1045-05:00"
+		},
+		{
+			"id": 12,
+			"nombre": "Cómo trabaja Google",
+			"autor": "Eric Schmidt",
+			"numPaginas": 382,
+			"cveTipoLibro": "NOVELA",
+			"tipoLibro": null,
+			"fechaAlta": "2018-07-25T11:15:38.104511-05:00"
+		}
+	]
+}
