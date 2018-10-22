@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Facturas" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4be69b6a-2ff5-45e9-9ae2-4c760f5399ba">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FacturasJsonDS"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="634"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="352"/>
+	<queryString language="json">
+		<![CDATA[datos]]>
+	</queryString>
+	<field name="CVE_EMPRESA" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CVE_EMPRESA"/>
+		<fieldDescription><![CDATA[CVE_EMPRESA]]></fieldDescription>
+	</field>
+	<field name="SERIE" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SERIE"/>
+		<fieldDescription><![CDATA[SERIE]]></fieldDescription>
+	</field>
+	<field name="ID_CXC" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ID_CXC"/>
+		<fieldDescription><![CDATA[ID_CXC]]></fieldDescription>
+	</field>
+	<field name="F_OPERACION" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="F_OPERACION"/>
+		<fieldDescription><![CDATA[F_OPERACION]]></fieldDescription>
+	</field>
+	<field name="ID_CLIENTE" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ID_CLIENTE"/>
+		<fieldDescription><![CDATA[ID_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="NOM_CLIENTE" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="NOM_CLIENTE"/>
+		<fieldDescription><![CDATA[NOM_CLIENTE]]></fieldDescription>
+	</field>
+	<field name="CVE_F_MONEDA" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CVE_F_MONEDA"/>
+		<fieldDescription><![CDATA[CVE_F_MONEDA]]></fieldDescription>
+	</field>
+	<field name="IMP_F_BRUTO" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="IMP_F_BRUTO"/>
+		<fieldDescription><![CDATA[IMP_F_BRUTO]]></fieldDescription>
+	</field>
+	<field name="IMP_F_IVA" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="IMP_F_IVA"/>
+		<fieldDescription><![CDATA[IMP_F_IVA]]></fieldDescription>
+	</field>
+	<field name="IMP_F_NETO" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="IMP_F_NETO"/>
+		<fieldDescription><![CDATA[IMP_F_NETO]]></fieldDescription>
+	</field>
+	<field name="DESC_CORTA_SP" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="DESC_CORTA_SP"/>
+		<fieldDescription><![CDATA[DESC_CORTA_SP]]></fieldDescription>
+	</field>
+	<field name="CVE_VENDEDOR1" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CVE_VENDEDOR1"/>
+		<fieldDescription><![CDATA[CVE_VENDEDOR1]]></fieldDescription>
+	</field>
+	<field name="IMP_BRUTO_ITEM" class="java.math.BigDecimal">
+		<property name="net.sf.jasperreports.json.field.expression" value="IMP_BRUTO_ITEM"/>
+		<fieldDescription><![CDATA[IMP_BRUTO_ITEM]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{CVE_EMPRESA} + $F{SERIE} + $F{ID_CXC}]]></groupExpression>
+		<groupHeader>
+			<band height="35" splitType="Stretch">
+				<textField>
+					<reportElement x="78" y="0" width="56" height="28" backcolor="#B39392" uuid="a84dc2b5-815c-49e7-a069-264788c195e3"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{CVE_EMPRESA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="204" y="0" width="56" height="28" backcolor="#B39392" uuid="b194999e-a4c1-4f24-9975-afeae6deb602"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{SERIE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="328" y="0" width="56" height="28" backcolor="#B39392" uuid="e99ec5fd-52f7-4690-8383-1b6ba9641d6c"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{ID_CXC}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="0" width="78" height="28" backcolor="#B39392" uuid="9bc824ce-ce99-47b1-8b33-58272cbc0f2f">
+						<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cve. Empresa:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="134" y="0" width="70" height="28" backcolor="#B39392" uuid="7071c990-eaae-47ad-94ad-5ba667282ee4"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Serie:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="260" y="0" width="68" height="28" backcolor="#B39392" uuid="9c6a0b4e-72d3-4f46-bb05-eb55fa327c43"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[No. Factura:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="384" y="0" width="106" height="28" backcolor="#B39392" uuid="1f112ac7-0f3e-41ea-a7f8-96c8c74a9a7c"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Imp. Bruto Factura:]]></text>
+				</staticText>
+				<textField pattern="$#,##0.00#;$(-#,##0.00#)">
+					<reportElement x="490" y="0" width="82" height="28" backcolor="#B39392" uuid="26de7744-10f8-412d-9e1a-79c6a10e3730"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{IMP_F_BRUTO}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="28" width="572" height="2" uuid="df414fa3-1037-4442-bcb9-d3e76c169164"/>
+					<graphicElement>
+						<pen lineWidth="1.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="0" y="0" width="572" height="2" uuid="1ff08c96-45e5-4e98-8d42-dd3a9ebb7cb1"/>
+					<graphicElement>
+						<pen lineWidth="1.25" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="14">
+				<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="0" width="283" height="30" uuid="2a3fea55-0c8a-472c-b012-a487dbed75f2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facturas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="30" width="283" height="30" uuid="37909e0e-635b-4aec-a529-ad520b8b9a32"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte que obtiene las facturas emitidas en un periodo de tiempo]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="70" y="0" width="226" height="30" uuid="38d685cf-36b9-42c1-923f-148a817683a3"/>
+				<textFieldExpression><![CDATA[$F{DESC_CORTA_SP}]]></textFieldExpression>
+			</textField>
+			<textField pattern="$#,##0.###;¤(#,##0.###-)">
+				<reportElement x="510" y="0" width="62" height="30" uuid="baae05bb-4eca-454f-9a75-c8c5870d7c80"/>
+				<textFieldExpression><![CDATA[$F{IMP_BRUTO_ITEM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" uuid="92ba2434-8fdc-4757-9e3c-3e936a2a0e44">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Subproducto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="70" height="30" uuid="bf9c6d3b-3a9c-45ea-bff3-6feefdc7f0f5"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cve. Vendedor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="370" y="0" width="70" height="30" uuid="c73c0441-d075-4f06-9170-1cbd28f48b00">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CVE_VENDEDOR1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="0" width="70" height="30" uuid="8c73098f-c2ed-49fb-a74c-4dcbbe7f5588"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Imp. Bruto Item:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

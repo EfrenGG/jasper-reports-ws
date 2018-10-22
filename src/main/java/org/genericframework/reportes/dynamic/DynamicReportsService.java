@@ -37,7 +37,12 @@ import net.sf.dynamicreports.report.constant.PageType;
 import net.sf.dynamicreports.report.constant.WhenNoDataType;
 import net.sf.dynamicreports.report.definition.datatype.DRIDataType;
 import net.sf.dynamicreports.report.exception.DRException;
+import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperCompileManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRAbstractTextDataSource;
 import net.sf.jasperreports.engine.data.JRXmlDataSource;
 import net.sf.jasperreports.engine.data.JsonDataSource;
@@ -46,6 +51,20 @@ import net.sf.jasperreports.engine.data.JsonDataSource;
 public class DynamicReportsService implements ReportesService {
 	
 	private ColumnGroupBuilder agrupador;
+	
+	public byte[] generaReporteJasper(String nomReporte, TipoArchivo tipoArchivo, String datos) {
+		byte[] reporte = null;
+		try {
+			ClassLoader classLoader = getClass().getClassLoader();
+			JasperReport jr = JasperCompileManager.compileReport(classLoader.getResourceAsStream("reportes/" + nomReporte));
+			JRDataSource ds = generaDataSourceJson(datos);
+			JasperPrint jp = JasperFillManager.fillReport(jr, null, ds);
+			reporte = ReportesJasperUtils.generaBytes(jp, tipoArchivo);
+		} catch(JRException e) {
+			e.printStackTrace();
+		}		
+		return reporte;
+	}
 
 	@Override
 	public byte[] generaReporteJasper(String tituloReporte, TamanoReporte tamanoMargen, TamanoReporte tamanoFuente,
