@@ -28,3 +28,4 @@ hs_err_pid*
 .project
 .settings/
 src/main/java/org/genericframework/schemas/
+src/main/java/META-INF/sun-jaxb.episode
